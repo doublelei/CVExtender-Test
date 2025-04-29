@@ -23,8 +23,9 @@ public class XmlUtils {
 
     // Add some random comment
 
+    factory.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
+    factory.setXIncludeAware(false);
 
-    
     Document doc = builder.parse(stream);
     return doc;
   }
